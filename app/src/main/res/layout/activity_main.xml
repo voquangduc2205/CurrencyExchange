@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:backgroundTint="@color/white"
         android:text="@string/currency1_value"
-        android:textSize="32sp"
+        android:textSize="20sp"
         android:textColor="@color/black"
         android:textAlignment="textStart"/>
 
@@ -48,7 +48,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/currency2_value"
         android:backgroundTint="@color/white"
-        android:textSize="32sp"
+        android:textSize="20sp"
         android:textColor="@color/black"
         android:textAlignment="textStart"/>
 

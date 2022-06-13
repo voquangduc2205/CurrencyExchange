@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private String curr1 = "$ ";
     private String curr2 = "đ ";
     private int selectInput = 1;
+    private int position1 = 0;
+    private int position2 = 0;
 
     String[] kindOfCurrency = {"United States - Dollar", "European - Euro", "Japanese - Yen", "British - Pound",
                                "China - Chinese Yuan", "Korea - Won", "Russian - Ruble", "Vietnam - Dong"};
@@ -71,7 +73,27 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.BS_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(selectInput == 1){
+                    if(input1.length() == 1){
+                        input1 = "0";
+                    }else{
+                        input1 = input1.substring(0, input1.length()-1);
+                    }
+                    btnInput1.setText(curr1 + input1);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
+                } else {
+                    if(input2.length() == 1){
+                        input2 = "0";
+                    }else{
+                        input2 = input2.substring(0, input2.length()-1);
+                    }
+                    btnInput2.setText(curr2 + input2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
+                }
             }
         });
 
@@ -86,11 +108,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -106,11 +134,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -126,11 +160,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -146,11 +186,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -166,11 +212,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -186,11 +238,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -206,11 +264,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -226,11 +290,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -246,11 +316,17 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -266,11 +342,19 @@ public class MainActivity extends AppCompatActivity {
                         btnInput1.setText(curr1 + tmp.toString());
                     } else btnInput1.setText(curr1 + input1 + tmp.toString());
                     input1 = btnInput1.getText().toString().substring(2);
+                    double val1 = Double.parseDouble(input1);
+                    Double val2 = val1 * exchangeRate[position1] / exchangeRate[position2];
+                    btnInput2.setText(curr2 + val2.toString());
+
+
                 } else{
                     if(input2.equals("0")){
                         btnInput2.setText(curr2 + tmp.toString());
                     } else btnInput2.setText(curr2 + input2 + tmp.toString());
                     input2 = btnInput2.getText().toString().substring(2);
+                    double val2 = Double.parseDouble(input2);
+                    Double val1 = val2 * exchangeRate[position2] / exchangeRate[position1];
+                    btnInput1.setText(curr1 + val1.toString());
                 }
             }
         });
@@ -294,7 +378,7 @@ public class MainActivity extends AppCompatActivity {
         currency1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                position1 = position;
             }
 
             @Override
@@ -305,12 +389,11 @@ public class MainActivity extends AppCompatActivity {
         currency2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                position2 = position;
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
