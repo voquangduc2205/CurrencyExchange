@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tab1_name">Currency</string>
+    <string name="currency1_value">$ 0</string>
+    <string name="currency2_value">đ 0</string>
+    <string name="currency1_name">United States - Dollar</string>
+    <string name="currency2_name">Vietnam - Dong</string>
+    <string name="exchange_rate">23,185.00</string>
+    <string name="update_day">Updated 6/13/2022 5:00 PM</string>
+    <string name="button_CE">CE</string>
+    <string name="button_BS">X</string>
+    <string name="button_dot">.</string>
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+    <string name="empty"></string>
+</resources>
